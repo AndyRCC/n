@@ -23,6 +23,21 @@
                         <li><a href="mailto:a20172034@pucp.edu.pe">Correo electrónico</a></li>
                         <li><a href="https://andyrcc.github.io/">Inicio</a></li>
                         <li><a href="https://www.facebook.com/andyricardo.casafrancacarrascal">Facebook</a></li>
+                        (function(){
+	var i = 2;
+		var cambiar = setInterval( function(){
+			//$('#cambiante').css( 'background-image', 'url("2.jpg")' );
+			$('#cambiante').animate({
+				opacity: 0
+			}, 'slow', function(){
+				$(this).css( {'background-image': 'url("' + i + '.jpg")'} )
+				.animate({opacity: 1});
+				i++;
+				if ( i == 3 ) { i = 1  };
+			});
+		}, 2000);
+	
+})();
                          
                         
 </body>
